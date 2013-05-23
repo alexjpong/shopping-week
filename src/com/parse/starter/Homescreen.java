@@ -32,6 +32,9 @@ public class Homescreen extends Activity {
 			Intent intent = new Intent(Homescreen.this, Login.class);
 			startActivity(intent);
 		}
-
+	}
+	
+	@Override
+	public void onBackPressed() {
 	}
 }
