@@ -1,6 +1,8 @@
 package com.parse.starter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,6 +36,18 @@ public class Login extends Activity {
     		    else {
     		      // Login failed. Look at the ParseException to see what happened.
 					Log.e("login error", e.getMessage());
+					final AlertDialog loginFail = new AlertDialog.Builder(Login.this).create();
+					loginFail.setTitle("Error");
+					loginFail
+					.setMessage("Login Failed");
+			loginFail.setButton("Close",
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int id) {
+							loginFail.cancel();
+						}
+					});
+			loginFail.show();
+
     		    }
     		  }
     		});

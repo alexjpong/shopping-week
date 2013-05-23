@@ -17,31 +17,35 @@
         style="@style/MenuButton"
         android:layout_below="@id/title"
         android:layout_marginTop="20sp"
+        android:onClick="onClick"
         android:text="@string/shop_classes" />
 
     <Button
         android:id="@+id/course_catalog"
         style="@style/MenuButton"
         android:layout_below="@id/shop_classes"
+        android:onClick="onClick"
         android:text="@string/course_catalog" />
 
     <Button
         android:id="@+id/my_courses"
         style="@style/MenuButton"
         android:layout_below="@id/course_catalog"
+        android:onClick="onClick"
         android:text="@string/my_courses" />
 
     <Button
         android:id="@+id/help"
         style="@style/MenuButton"
         android:layout_below="@id/my_courses"
+        android:onClick="onClick"
         android:text="@string/help" />
 
     <Button
         android:id="@+id/logout"
         style="@style/MenuButton"
         android:layout_below="@id/help"
-        android:onClick="logout"
+        android:onClick="onClick"
         android:text="@string/logout" />
 
     <LinearLayout
