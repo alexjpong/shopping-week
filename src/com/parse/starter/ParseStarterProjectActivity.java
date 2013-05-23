@@ -16,5 +16,6 @@ public class ParseStarterProjectActivity extends Activity {
 		Button button = (Button) findViewById(R.id.registersubmit);
 		
 		
+		
 	}
 }
