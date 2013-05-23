@@ -8,4 +8,7 @@
     <string name="registersubmit">Submit!</string>
     <string name="or_login">Or, login here</string>
     <string name="gotologin">Login</string>
+    <string name="login">Login here:</string>
+    <string name="or_register">Or register </string>
+    <string name="gotoregister">Register</string>
 </resources>
