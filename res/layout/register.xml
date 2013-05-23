@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
-    <TextView
+    
+     <include
+        android:id="@+id/title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/title" />
+
+    <TextView
+        android:id="@+id/create_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_gravity="center_horizontal"
         android:text="@string/create" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/account_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/create_label"        android:layout_gravity="center_horizontal"
+        
         android:text="@string/account" />
 
     <EditText
@@ -20,18 +32,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+                android:layout_below="@id/account_label"        android:layout_gravity="center_horizontal"
+                
         android:inputType="textEmailAddress" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/pw_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+                android:layout_below="@id/register_email"        android:layout_gravity="center_horizontal"
+                
+        
         android:text="@string/pw" />
 
     <EditText
         android:id="@+id/register_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+                android:layout_below="@id/pw_label"
+                android:layout_gravity="center_horizontal"
+        
         android:ems="10"
         android:inputType="textPassword" >
 
@@ -43,19 +63,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/registersubmit" 
+                android:layout_below="@id/register_pass"        android:layout_gravity="center_horizontal"
+                
+        
         android:onClick = "registerSubmit"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/or_login_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+                android:layout_below="@id/registersubmit"        android:layout_gravity="center_horizontal"
+                
+        
         android:text="@string/or_login" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/gotologin" 
+                android:layout_below="@id/or_login_label"        android:layout_gravity="center_horizontal"
+                
+        
         android:onClick="gotoLogin"/>
 
-</LinearLayout>
+</RelativeLayout>

@@ -17,7 +17,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity android:name="Login"></activity>
-        <activity android:name="Classes">
+        <activity android:name="com.parse.starter.Homescreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

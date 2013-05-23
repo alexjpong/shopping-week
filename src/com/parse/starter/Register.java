@@ -41,7 +41,7 @@ public class Register extends Activity {
 				public void done(ParseException e) {
 					if (e == null) {
 						// Hooray! Let them use the app now.
-						Intent intent = new Intent(Register.this, Classes.class);
+						Intent intent = new Intent(Register.this, Homescreen.class);
 						startActivity(intent);
 					} 
 					else {

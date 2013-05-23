@@ -28,7 +28,7 @@ public class Login extends Activity {
     		  public void done(ParseUser user, ParseException e) {
     		    if (user != null) {
     		      // Hooray! The user is logged in.
-    		    	Intent intent = new Intent(Login.this, Classes.class);
+    		    	Intent intent = new Intent(Login.this, Homescreen.class);
 			    	startActivity(intent);
     		    } 
     		    else {

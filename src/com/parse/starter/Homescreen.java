@@ -7,15 +7,15 @@ import android.os.Bundle;
 import com.parse.ParseAnalytics;
 import com.parse.ParseUser;
 
-public class Classes extends Activity {
+public class Homescreen extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		ParseUser currentUser = ParseUser.getCurrentUser();
 		if (currentUser == null) {
-	    	Intent intent = new Intent(Classes.this, Register.class);
+	    	Intent intent = new Intent(Homescreen.this, Register.class);
 	    	startActivity(intent);
 		} 
-		setContentView(R.layout.classes);
+		setContentView(R.layout.main);
 		ParseAnalytics.trackAppOpened(getIntent());		
 	}
 }
