@@ -52,7 +52,10 @@ public class Homescreen extends Activity {
 			break;
 
 		}
-
+	}
+	
+	@Override
+	public void onBackPressed() {
 	}
 
 }
