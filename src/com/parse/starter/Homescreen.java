@@ -1,13 +1,19 @@
 package com.parse.starter;
 
+import java.util.HashMap;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DigitalClock;
 
+import com.parse.FunctionCallback;
+import com.parse.ParseException;
 import com.parse.ParseAnalytics;
+import com.parse.ParseCloud;
 import com.parse.ParseUser;
 
 public class Homescreen extends Activity {
@@ -22,7 +28,6 @@ public class Homescreen extends Activity {
 		ParseAnalytics.trackAppOpened(getIntent());
 		DigitalClock dc = (DigitalClock) findViewById(R.id.clock);
 		Button logout = (Button) findViewById(R.id.logout);
-
 	}
 
 	public void onClick(View view) {
