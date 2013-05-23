@@ -3,88 +3,71 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-    
-     <include
+
+    <include
         android:id="@+id/title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100sp"
         layout="@layout/title" />
 
     <TextView
         android:id="@+id/create_label"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/create" />
-
-    <TextView
-        android:id="@+id/account_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/create_label"        android:layout_gravity="center_horizontal"
-        
-        android:text="@string/account" />
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:text="@string/create"
+        android:textColor="#ffffff" />
 
     <EditText
         android:id="@+id/register_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/EditText"
+        android:layout_below="@id/create_label"
+        android:layout_centerHorizontal="true"
         android:ems="10"
-                android:layout_below="@id/account_label"        android:layout_gravity="center_horizontal"
-                
-        android:inputType="textEmailAddress" />
-
-    <TextView
-        android:id="@+id/pw_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-                android:layout_below="@id/register_email"        android:layout_gravity="center_horizontal"
-                
-        
-        android:text="@string/pw" />
+        android:hint="@string/account"
+        android:inputType="textEmailAddress"
+        android:textSize="10sp" />
 
     <EditText
         android:id="@+id/register_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-                android:layout_below="@id/pw_label"
-                android:layout_gravity="center_horizontal"
-        
+        style="@style/EditText"
+        android:layout_below="@id/register_email"
+        android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textPassword" >
+        android:hint="@string/pw"
+        android:inputType="textPassword"
+        android:textSize="10sp" >
 
         <requestFocus />
     </EditText>
 
     <Button
         android:id="@+id/registersubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/registersubmit" 
-                android:layout_below="@id/register_pass"        android:layout_gravity="center_horizontal"
-                
-        
-        android:onClick = "registerSubmit"/>
+        style="@style/Button"
+        android:layout_below="@id/register_pass"
+        android:layout_centerHorizontal="true"
+        android:onClick="registerSubmit"
+        android:text="@string/registersubmit" />
 
     <TextView
         android:id="@+id/or_login_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-                android:layout_below="@id/registersubmit"        android:layout_gravity="center_horizontal"
-                
-        
-        android:text="@string/or_login" />
+        android:layout_below="@id/registersubmit"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/or_login"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gotologin" 
-                android:layout_below="@id/or_login_label"        android:layout_gravity="center_horizontal"
-                
-        
-        android:onClick="gotoLogin"/>
+        style="@style/Button"
+        android:layout_below="@id/or_login_label"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotoLogin"
+        android:text="@string/gotologin" />
 
 </RelativeLayout>

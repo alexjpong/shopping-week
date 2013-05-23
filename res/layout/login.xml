@@ -1,62 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
+    <include
+        android:id="@+id/title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100sp"
+        layout="@layout/title" />
 
     <TextView
-        android:id="@+id/account_label"
+        android:id="@+id/login_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/account" />
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:text="@string/login"
+        android:textColor="#ffffff" />
 
     <EditText
         android:id="@+id/login_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/EditText"
+        android:layout_below="@id/login_label"
+        android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textEmailAddress" />
-
-    <TextView
-        android:id="@+id/pw_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pw" />
+        android:hint="@string/account"
+        android:inputType="textEmailAddress"
+        android:textSize="10sp" />
 
     <EditText
         android:id="@+id/login_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/EditText"
+        android:layout_below="@id/login_email"
+        android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textPassword" >
+        android:hint="@string/pw"
+        android:inputType="textPassword"
+        android:textSize="10sp" >
 
         <requestFocus />
     </EditText>
 
     <Button
         android:id="@+id/loginsubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/registersubmit" 
-        android:onClick = "loginSubmit"/>
-    
-        <TextView
+        style="@style/Button"
+        android:layout_below="@id/login_pass"
+        android:layout_centerHorizontal="true"
+        android:onClick="loginSubmit"
+        android:text="@string/registersubmit" />
+
+    <TextView
         android:id="@+id/or_register_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/or_register" />
+        android:layout_below="@id/loginsubmit"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/or_register"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/register_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gotoregister" 
-        android:onClick="gotoRegister"/>
-    
-    
-</LinearLayout>
+        style="@style/Button"
+        android:layout_below="@id/or_register_label"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotoRegister"
+        android:text="@string/gotoregister" />
+
+</RelativeLayout>
