@@ -3,6 +3,7 @@ package com.parse.starter;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.DigitalClock;
 
 import com.parse.ParseAnalytics;
 import com.parse.ParseUser;
@@ -16,6 +17,7 @@ public class Homescreen extends Activity {
 	    	startActivity(intent);
 		} 
 		setContentView(R.layout.main);
-		ParseAnalytics.trackAppOpened(getIntent());		
+		ParseAnalytics.trackAppOpened(getIntent());	
+		DigitalClock dc = (DigitalClock) findViewById(R.id.clock);
 	}
 }

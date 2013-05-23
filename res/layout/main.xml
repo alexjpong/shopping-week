@@ -1,49 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <include
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100sp"
+        layout="@layout/title" />
+
+    <Button
+        android:id="@+id/shop_classes"
+        style="@style/MenuButton"
+        android:layout_marginTop="20sp"
+        android:layout_below="@id/title"
+        android:text="@string/shop_classes" />
+
+    <Button
+        android:id="@+id/course_catalog"
+        style="@style/MenuButton"
+        android:layout_below="@id/shop_classes"
+        android:text="@string/course_catalog" />
+
+    <Button
+        android:id="@+id/my_courses"
+        style="@style/MenuButton"
+        android:layout_below="@id/course_catalog"
+        android:text="@string/my_courses" />
+
+    <Button
+        android:id="@+id/help"
+        style="@style/MenuButton"
+        android:layout_below="@id/my_courses"
+        android:text="@string/help" />
+
+    <LinearLayout
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/it_is_currently"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:textColor="#fff"
+            
+            android:text="@string/time" />
+
+        <DigitalClock
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3sp"
+                    android:textColor="#fff"
+            
+            android:text=" " />
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/class_recommendation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_below="@id/time"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:text="CS50 is on right now in SANDER&apos;S THEATRE!" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/random_class"
+        style="@style/MenuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_below="@id/class_recommendation"
+        android:layout_centerHorizontal="true"
+        android:text="@string/random_class"
+        android:textSize="10sp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-</LinearLayout>
+</RelativeLayout>

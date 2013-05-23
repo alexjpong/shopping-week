@@ -11,4 +11,12 @@
     <string name="login">Login here:</string>
     <string name="or_register">Or register </string>
     <string name="gotoregister">Register</string>
+    <string name="shop_classes">Shop Classes</string>
+    <string name="course_catalog">Course Catalog</string>
+    <string name="my_courses">My Courses</string>
+    <string name="help">Help</string>
+        <string name="time">It is currently</string>
+                <string name="random_class">ANOTHER RANDOM CLASS?</string>
+        
+    
 </resources>
