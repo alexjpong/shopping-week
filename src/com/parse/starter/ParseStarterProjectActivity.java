@@ -7,6 +7,7 @@ import android.widget.Button;
 import com.parse.ParseAnalytics;
 
 public class ParseStarterProjectActivity extends Activity {
+  // testing hi
 	/** Called when the activity is first created. */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
