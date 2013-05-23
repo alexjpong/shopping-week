@@ -2,4 +2,11 @@
 <resources>
     <string name="hello">Hello World, ParseStarterProjectActivity!</string>
     <string name="app_name">ParseStarterProject</string>
+    <string name="create">Create a new account!</string>
+    <string name="account">Email Address</string>
+    <string name="pw">Password</string>
+    <string name="registersubmit">Submit!</string>
+    <string name="or_login">Or, login here</string>
+    <string />
+    <string name="gotologin">Login</string>
 </resources>
