@@ -1,6 +1,7 @@
 package com.parse.starter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.parse.ParseObject;
 
@@ -12,9 +13,9 @@ import android.widget.TextView;
 
 // adapter for records listview
 public class ListAdapter extends ArrayAdapter<ParseObject> {
-	ArrayList<ParseObject> classes;
+	List<ParseObject> classes;
 	
-	public ListAdapter(Activity activity, ArrayList<ParseObject> classes) {
+	public ListAdapter(Activity activity, List<ParseObject> classes) {
 		super(activity, R.layout.list_item, R.id.classname, classes);
 		this.classes = classes;
 	}

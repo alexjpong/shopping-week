@@ -77,7 +77,8 @@ public class ShopClasses extends Activity {
 
 		// set each row on listview clickable to lead to individual session
 		// screens
-		classList.setOnItemClickListener(new OnItemClickListener() {
+		/*
+		courseList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 
@@ -85,7 +86,7 @@ public class ShopClasses extends Activity {
 
 			}
 		});
-
+		*/
 
 
 	}
