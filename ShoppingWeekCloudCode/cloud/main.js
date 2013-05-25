@@ -6,6 +6,15 @@ Parse.Cloud.define("hello", function(request, response) {
 });
 
 
-Parse.Cloud.define("coursesNow", function(request, response) {
-	response.success("Hello world!");
-});
+Parse.Cloud.define("coursesAtTime", function(request, response) {
+	  var query = new Parse.Query("Course");
+	  query.contains("meetings", request.params.day);
+	  query.find({
+	    success: function(results) {
+	      for (var result in results)
+	    },
+	    error: function() {
+	      response.error("movie lookup failed");
+	    }
+	  });
+	});

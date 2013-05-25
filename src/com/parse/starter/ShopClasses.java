@@ -63,19 +63,17 @@ public class ShopClasses extends Activity {
 		ListView classList = (ListView) findViewById(R.id.class_list);
 
 		ParseQuery query = new ParseQuery("Course");
-		
-
-		//query.whereExists("meetings");
-		
-		query.whereMatches("cat_num", "4949");
+				
+		query.whereNotEqualTo("meetings", "");
+		query.setLimit(10);
 		query.findInBackground(new FindCallback() {
 			public void done(List<ParseObject> courseList, ParseException e) {
 				if (e == null) {	
-					Log.d("score", "Retrieved " + courseList.size() + " scores");
+					Log.d("course", "Retrieved " + courseList.size() + " courses");
 					ListView classList = (ListView) findViewById(R.id.class_list);
 					classList.setAdapter(new ListAdapter(ShopClasses.this, courseList));
 				} else {
-					Log.d("score", "Error: " + e.getMessage());
+					Log.d("course", "Error: " + e.getMessage());
 				}
 			}
 		});
