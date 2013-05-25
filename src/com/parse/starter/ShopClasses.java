@@ -60,6 +60,7 @@ public class ShopClasses extends Activity {
 		// have to edit the adapter to alter classroom and time
 		classList.setAdapter(new ListAdapter(this, classes));
 		 */
+		ListView classList = (ListView) findViewById(R.id.class_list);
 
 		ParseQuery query = new ParseQuery("Course");
 		
