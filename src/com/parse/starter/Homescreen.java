@@ -26,8 +26,6 @@ public class Homescreen extends Activity {
 		}
 		setContentView(R.layout.main);
 		ParseAnalytics.trackAppOpened(getIntent());
-		DigitalClock dc = (DigitalClock) findViewById(R.id.clock);
-		Button logout = (Button) findViewById(R.id.logout);
 	}
 
 	public void onClick(View view) {
