@@ -62,7 +62,11 @@ public class ShopClasses extends Activity {
 		 */
 
 		ParseQuery query = new ParseQuery("Course");
-		query.whereExists("meetings");
+		
+
+		//query.whereExists("meetings");
+		
+		query.whereMatches("cat_num", "4949");
 		query.findInBackground(new FindCallback() {
 			public void done(List<ParseObject> courseList, ParseException e) {
 				if (e == null) {	

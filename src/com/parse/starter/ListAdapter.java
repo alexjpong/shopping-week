@@ -30,6 +30,7 @@ public class ListAdapter extends ArrayAdapter<ParseObject> {
 		String room = classes.get(position).getString("building") + " " + classes.get(position).getString("room");
 		((TextView) view.findViewById(R.id.room)).setText(room);
 		String time = classes.get(position).getString("meetings");
+		time = time.replaceAll("[a-z]|\\.|\\,", "");	
 		((TextView) view.findViewById(R.id.time)).setText(time);
 
 		return view;
