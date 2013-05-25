@@ -25,13 +25,12 @@ public class ListAdapter extends ArrayAdapter<ParseObject> {
 		
 		//figure out how the courses will be parsed after json and edit accordingly
 		//eg:
-		
-		/*((TextView) view.findViewById(R.id.classname)).setText(classes
-				.get(position).getName()));
-		((TextView) view.findViewById(R.id.room)).setText(classes.get(position)
-				.getRoom());
-		((TextView) view.findViewById(R.id.time)).setText(classes.get(position)
-				.getTime());*/
+		String name = classes.get(position).getString("field") + classes.get(position).getString("number");
+		((TextView) view.findViewById(R.id.classname)).setText(name);
+		String room = classes.get(position).getString("building") + " " + classes.get(position).getString("room");
+		((TextView) view.findViewById(R.id.room)).setText(room);
+		String time = classes.get(position).getString("meetings");
+		((TextView) view.findViewById(R.id.time)).setText(time);
 
 		return view;
 	}
