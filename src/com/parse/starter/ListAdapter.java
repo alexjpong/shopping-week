@@ -2,6 +2,8 @@ package com.parse.starter;
 
 import java.util.ArrayList;
 
+import com.parse.ParseObject;
+
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,10 +11,10 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 // adapter for records listview
-public class ListAdapter extends ArrayAdapter<String> {
-	ArrayList<String> classes;
+public class ListAdapter extends ArrayAdapter<ParseObject> {
+	ArrayList<ParseObject> classes;
 	
-	public ListAdapter(Activity activity, ArrayList<String> classes) {
+	public ListAdapter(Activity activity, ArrayList<ParseObject> classes) {
 		super(activity, R.layout.list_item, R.id.classname, classes);
 		this.classes = classes;
 	}
