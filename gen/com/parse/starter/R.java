@@ -11,49 +11,56 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int custom_theme_color=0x7f060000;
+        public static final int custom_theme_color=0x7f050000;
     }
     public static final class drawable {
         public static final int btn_bg=0x7f020000;
-        public static final int edittext_bg=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int btn_bg_red=0x7f020001;
+        public static final int edittext_bg=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int class_recommendation=0x7f070011;
-        public static final int clock=0x7f070010;
-        public static final int course_catalog=0x7f07000a;
-        public static final int create_label=0x7f070013;
+        public static final int class_list=0x7f07001d;
+        public static final int class_recommendation=0x7f070013;
+        public static final int classname=0x7f070002;
+        public static final int clock=0x7f070012;
+        public static final int course_catalog=0x7f07000d;
+        public static final int create_label=0x7f070015;
         public static final int header=0x7f070000;
-        public static final int help=0x7f07000c;
-        public static final int it_is_currently=0x7f07000f;
-        public static final int login_btn=0x7f070018;
-        public static final int login_email=0x7f070004;
-        public static final int login_label=0x7f070003;
-        public static final int login_pass=0x7f070005;
-        public static final int loginsubmit=0x7f070006;
-        public static final int logout=0x7f07000d;
-        public static final int my_courses=0x7f07000b;
-        public static final int or_login_label=0x7f070017;
-        public static final int or_register_label=0x7f070007;
-        public static final int random_class=0x7f070012;
-        public static final int register_btn=0x7f070008;
-        public static final int register_email=0x7f070014;
-        public static final int register_pass=0x7f070015;
-        public static final int registersubmit=0x7f070016;
-        public static final int shop_classes=0x7f070009;
+        public static final int help=0x7f07000f;
+        public static final int it_is_currently=0x7f070011;
+        public static final int login_btn=0x7f07001a;
+        public static final int login_email=0x7f070007;
+        public static final int login_label=0x7f070006;
+        public static final int login_pass=0x7f070008;
+        public static final int loginsubmit=0x7f070009;
+        public static final int logout=0x7f070010;
+        public static final int my_courses=0x7f07000e;
+        public static final int or_login_label=0x7f070019;
+        public static final int or_register_label=0x7f07000a;
+        public static final int random_class=0x7f070014;
+        public static final int register_btn=0x7f07000b;
+        public static final int register_email=0x7f070016;
+        public static final int register_pass=0x7f070017;
+        public static final int registersubmit=0x7f070018;
+        public static final int room=0x7f070003;
+        public static final int shop_classes=0x7f07000c;
+        public static final int testing=0x7f07001c;
         public static final int textView1=0x7f070001;
-        public static final int time=0x7f07000e;
-        public static final int title=0x7f070002;
+        public static final int time=0x7f070004;
+        public static final int timePicker=0x7f07001b;
+        public static final int title=0x7f070005;
     }
     public static final class layout {
         public static final int catalog=0x7f030000;
         public static final int header=0x7f030001;
-        public static final int login=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int mycourses=0x7f030004;
-        public static final int register=0x7f030005;
-        public static final int shop=0x7f030006;
-        public static final int title=0x7f030007;
+        public static final int list_item=0x7f030002;
+        public static final int login=0x7f030003;
+        public static final int main=0x7f030004;
+        public static final int mycourses=0x7f030005;
+        public static final int register=0x7f030006;
+        public static final int shop=0x7f030007;
+        public static final int title=0x7f030008;
     }
     public static final class string {
         public static final int account=0x7f040003;
@@ -74,11 +81,13 @@ public final class R {
         public static final int registersubmit=0x7f040005;
         public static final int shop_classes=0x7f04000b;
         public static final int time=0x7f040010;
+        public static final int whats_on=0x7f040012;
     }
     public static final class style {
-        public static final int Button=0x7f050001;
-        public static final int EditText=0x7f050000;
-        public static final int MenuButton=0x7f050002;
-        public static final int Theme=0x7f050003;
+        public static final int Button=0x7f060001;
+        public static final int Button_red=0x7f060002;
+        public static final int EditText=0x7f060000;
+        public static final int MenuButton=0x7f060003;
+        public static final int Theme=0x7f060004;
     }
 }

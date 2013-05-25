@@ -2,25 +2,40 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF">
-    
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
     <include
         android:id="@+id/header"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
         layout="@layout/header" />
-    
 
-    <TextView
-        android:id="@+id/textView1"
+    <TimePicker
+        android:id="@+id/timePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/header"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="96dp"
-        android:text="HI IM THE SHOP CLASSES PAGE" />
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/testing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/timePicker"
+        android:text="display time" />
+    
+     <ListView
+        android:id="@+id/class_list"
+        android:layout_width="300sp"
+        android:layout_height="200sp"
+        android:layout_below="@+id/timePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp" >
+    </ListView>
 
 </RelativeLayout>
