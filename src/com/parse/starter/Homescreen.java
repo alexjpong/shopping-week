@@ -1,6 +1,5 @@
 package com.parse.starter;
 
-import java.util.HashMap;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -26,6 +25,13 @@ public class Homescreen extends Activity {
 		}
 		setContentView(R.layout.main);
 		ParseAnalytics.trackAppOpened(getIntent());
+		DigitalClock dc = (DigitalClock) findViewById(R.id.clock);
+		Button logout = (Button) findViewById(R.id.logout);
+		
+		/* No go! Not enough memory! :(
+		Util.loadCatalog("https://api.cs50.net/courses/1.0/courses?output=json");
+		*/
+
 	}
 
 	public void onClick(View view) {
