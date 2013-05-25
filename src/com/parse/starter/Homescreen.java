@@ -31,7 +31,7 @@ public class Homescreen extends Activity {
 		/* No go! Not enough memory! :(
 		Util.loadCatalog("https://api.cs50.net/courses/1.0/courses?output=json");
 		*/
-		
+
 	}
 
 	public void onClick(View view) {
