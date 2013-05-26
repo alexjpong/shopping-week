@@ -15,7 +15,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.AdapterView.OnItemClickListener;
 
-
 import com.parse.FindCallback;
 import com.parse.ParseAnalytics;
 import com.parse.ParseQuery;
@@ -39,7 +38,6 @@ public class ShopClasses extends Activity {
 
 		test = (TextView) findViewById(R.id.testing);
 
-
 		tp.setCurrentHour(Calendar.HOUR_OF_DAY);
 		tp.setCurrentMinute(Calendar.MINUTE);
 		tp.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
@@ -49,68 +47,46 @@ public class ShopClasses extends Activity {
 			}
 		});
 
-
-
-		//testing code for course catalog
-		/*
-		ArrayList<String> classes = new ArrayList<String>();
-		//will turn into ArrayList<Class> classes? can parse do this
-		classes.add("testing1");
-		classes.add("testing2");
-		// have to edit the adapter to alter classroom and time
-		classList.setAdapter(new ListAdapter(this, classes));
-		 */
-		ListView classList = (ListView) findViewById(R.id.class_list);
-
 		ParseQuery query = new ParseQuery("Course");
-		
 
-		//query.whereExists("meetings");
-		
+		// query.whereExists("meetings");
+
 		query.whereMatches("cat_num", "4949");
 		query.findInBackground(new FindCallback() {
 			public void done(List<ParseObject> courseList, ParseException e) {
-				if (e == null) {	
+				if (e == null) {
 					Log.d("score", "Retrieved " + courseList.size() + " scores");
 					ListView classList = (ListView) findViewById(R.id.class_list);
-					classList.setAdapter(new ListAdapter(ShopClasses.this, courseList));
+					classList.setAdapter(new ListAdapter(ShopClasses.this,
+							courseList));
+					classList.setOnItemClickListener(new OnItemClickListener() {
+						public void onItemClick(AdapterView<?> parent,
+								View view, int position, long id) {
+
+							// Open up class details
+
+						}
+					});
 				} else {
 					Log.d("score", "Error: " + e.getMessage());
 				}
 			}
 		});
 
-		// set each row on listview clickable to lead to individual session
-		// screens
-		/*
-		courseList.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-
-				//Open up class details
-
-			}
-		});
-		*/
-
-
 	}
 
 	private void updateDisplay(int hour, int min) {
-		//this is to test whether changing the hour does anything
-		test.setText(
-				new StringBuilder()
-				.append(pad(hour)).append(":")
+		// this is to test whether changing the hour does anything
+		test.setText(new StringBuilder().append(pad(hour)).append(":")
 				.append(pad(min)));
 
-
-		//WHAT THIS SHOULD DO:
-		//	query and change listview according to time set
+		// WHAT THIS SHOULD DO:
+		// query and change listview according to time set
 
 	}
 
-	//helper function for int to string
-	//just saying there's a function in java that gets ascii values for you
+	// helper function for int to string
+	// just saying there's a function in java that gets ascii values for you
 	private static String pad(int c) {
 		if (c >= 10)
 			return String.valueOf(c);
