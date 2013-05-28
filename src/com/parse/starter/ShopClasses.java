@@ -18,7 +18,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.AdapterView.OnItemClickListener;
 
-
 import com.parse.FindCallback;
 import com.parse.FunctionCallback;
 import com.parse.ParseAnalytics;
@@ -29,6 +28,7 @@ import com.parse.ParseObject;
 import com.parse.ParseException;
 
 public class ShopClasses extends Activity {
+
 	private TextView test;
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class ShopClasses extends Activity {
 		TimePicker tp = (TimePicker) findViewById(R.id.timePicker);
 
 		test = (TextView) findViewById(R.id.testing);
-
 
 		tp.setCurrentHour(Calendar.HOUR_OF_DAY);
 		tp.setCurrentMinute(Calendar.MINUTE);
@@ -63,10 +62,11 @@ public class ShopClasses extends Activity {
 		// have to edit the adapter to alter classroom and time
 		classList.setAdapter(new ListAdapter(this, classes));
 		 */
-		
+
 		//testing code for course catalog
 		/*
 		ParseQuery query = new ParseQuery("Course");
+
 
 		query.whereNotEqualTo("meetings", "");
 		query.setLimit(10);
@@ -74,14 +74,24 @@ public class ShopClasses extends Activity {
 			public void done(List<ParseObject> courseList, ParseException e) {
 				if (e == null) {	
 					Log.d("course", "Retrieved " + courseList.size() + " courses");
+
 					ListView classList = (ListView) findViewById(R.id.class_list);
-					classList.setAdapter(new ListAdapter(ShopClasses.this, courseList));
+					classList.setAdapter(new ListAdapter(ShopClasses.this,
+							courseList));
+					classList.setOnItemClickListener(new OnItemClickListener() {
+						public void onItemClick(AdapterView<?> parent,
+								View view, int position, long id) {
+
+							// Open up class details
+
+						}
+					});
 				} else {
 					Log.d("course", "Error: " + e.getMessage());
 				}
 			}
 		});*/
-		
+
 		//Parse CloudCode call
 		HashMap<String, Object> params = new HashMap<String, Object>();
 		String day = "M";
@@ -100,11 +110,10 @@ public class ShopClasses extends Activity {
 				}
 			}
 		});
-
-
-		// set each row on listview clickable to lead to individual session
-		// screens
-		/*
+	}
+	// set each row on listview clickable to lead to individual session
+	// screens
+	/*
 		courseList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -113,26 +122,22 @@ public class ShopClasses extends Activity {
 
 			}
 		});
-		 */
+	 */
 
 
-	}
 
 	private void updateDisplay(int hour, int min) {
-		//this is to test whether changing the hour does anything
-		test.setText(
-				new StringBuilder()
-				.append(pad(hour)).append(":")
+		// this is to test whether changing the hour does anything
+		test.setText(new StringBuilder().append(pad(hour)).append(":")
 				.append(pad(min)));
 
-
-		//WHAT THIS SHOULD DO:
-		//	query and change listview according to time set
+		// WHAT THIS SHOULD DO:
+		// query and change listview according to time set
 
 	}
 
-	//helper function for int to string
-	//just saying there's a function in java that gets ascii values for you
+	// helper function for int to string
+	// just saying there's a function in java that gets ascii values for you
 	private static String pad(int c) {
 		if (c >= 10)
 			return String.valueOf(c);
