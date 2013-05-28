@@ -3,6 +3,8 @@ package com.parse.starter;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,6 +35,7 @@ public class Util {
 		return readIn;
 
 	}
+
 
 	/**
 	 * Read in a url and load its corresponding JSON into the cloud
@@ -87,4 +90,48 @@ public class Util {
 		}
 	}
 
+	/**
+	 * Read in a JSONArray and return a corresponding ParseObject
+	 * 
+	 * @param JSONArray
+	 * @return returns a ParseObject list
+	 */
+	
+	public static List<ParseObject> jsonArrayToParseObjectList(JSONArray array)
+	{
+		List<ParseObject> lst = new ArrayList<ParseObject>();
+		for(int i = 0; i < array.length(); i++)
+		{	
+			JSONObject entryObject = null;
+			try {
+				entryObject = (JSONObject) array.get(i);				
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			ParseObject course = new ParseObject("Course");
+
+			try {
+				course.put("cat_num", entryObject.getString("cat_num"));
+				course.put("bracketed", entryObject.getBoolean("bracketed"));
+				course.put("term", entryObject.getString("term"));
+				course.put("field", entryObject.getString("field"));
+				course.put("number", entryObject.getString("number"));
+				course.put("title", entryObject.getString("title"));
+				course.put("description", entryObject.getString("description"));
+				course.put("faculty", entryObject.getString("faculty"));
+				course.put("notes", entryObject.getString("notes"));
+				course.put("meetings", entryObject.getString("meetings"));
+				course.put("building", entryObject.getString("building"));
+				course.put("room", entryObject.getString("room"));
+
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			lst.add(course);
+		}
+		return lst;
+	}
+	
 }
