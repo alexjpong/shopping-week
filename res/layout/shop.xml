@@ -13,27 +13,40 @@
         android:layout_gravity="center_horizontal"
         layout="@layout/header" />
 
-    <TimePicker
-        android:id="@+id/timePicker"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/selectors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/header"
+        android:layout_below="@id/header"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal" >
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/dayPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/testing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/selectors"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/timePicker"
         android:text="display time" />
-    
-     <ListView
+
+    <ListView
         android:id="@+id/class_list"
         android:layout_width="300sp"
         android:layout_height="250sp"
-        android:layout_below="@+id/timePicker"
+        android:layout_below="@+id/selectors"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20sp" >
     </ListView>

@@ -20,12 +20,13 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int class_list=0x7f07001d;
+        public static final int class_list=0x7f07001f;
         public static final int class_recommendation=0x7f070013;
         public static final int classname=0x7f070002;
         public static final int clock=0x7f070012;
         public static final int course_catalog=0x7f07000d;
         public static final int create_label=0x7f070015;
+        public static final int dayPicker=0x7f07001d;
         public static final int header=0x7f070000;
         public static final int help=0x7f07000f;
         public static final int it_is_currently=0x7f070011;
@@ -44,11 +45,12 @@ public final class R {
         public static final int register_pass=0x7f070017;
         public static final int registersubmit=0x7f070018;
         public static final int room=0x7f070003;
+        public static final int selectors=0x7f07001b;
         public static final int shop_classes=0x7f07000c;
-        public static final int testing=0x7f07001c;
+        public static final int testing=0x7f07001e;
         public static final int textView1=0x7f070001;
         public static final int time=0x7f070004;
-        public static final int timePicker=0x7f07001b;
+        public static final int timePicker=0x7f07001c;
         public static final int title=0x7f070005;
     }
     public static final class layout {

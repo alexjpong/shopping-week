@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="name" />
+        android:text="" />
     
     <TextView
         android:id="@+id/room"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_below="@id/classname"
-        android:text="classroom"/>
+        android:text=""/>
     
     <TextView
         android:id="@+id/time"
@@ -26,6 +26,6 @@
         android:layout_height="wrap_content"
        android:layout_alignParentRight="true"
        android:layout_alignParentTop="true" 
-       android:text="time"/>
+       android:text=""/>
 
 </RelativeLayout>
