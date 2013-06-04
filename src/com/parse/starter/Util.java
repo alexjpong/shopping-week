@@ -70,6 +70,7 @@ public class Util {
 			ParseObject course = new ParseObject("Course");
 
 			try {
+				course.put("cat_num", entryObject.getBoolean("bracketed"));
 				course.put("cat_num", entryObject.getString("cat_num"));
 				course.put("term", entryObject.getString("term"));
 				course.put("field", entryObject.getString("field"));

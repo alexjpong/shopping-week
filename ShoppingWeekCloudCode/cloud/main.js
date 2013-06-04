@@ -12,16 +12,23 @@ Parse.Cloud.define("coursesAtTime", function(request, response) {
 	query.find({
 		success: function(results) {
 			var toReturn;
-//			for (var result in results)
-//			{
-//				var searchTime = false;
-//				var s = result.get("meetings").split(" ");
-//				for (word in s)
-//				{
-//					if (word.indexOf(request.params.day) !== -1) searchTime=true;
-//				}
-//			}
-			response.success(results);
+			var resultlist = JSON.parse(results);
+			for (var result in resultlist)
+			{
+				var searchTime = false;
+				var s = result.["metings"].split(" ");
+				for (word in s)
+				{
+					if (word.indexOf(request.params.day) !== -1) searchTime=true;
+					if ()
+					{
+						toReturn.push(result);
+						break;
+					}
+				}
+			}
+			response.success(JSON.stringify(toReturn))
+			//response.success(results);
 		},
 		error: function() {
 			response.error("movie lookup failed");
